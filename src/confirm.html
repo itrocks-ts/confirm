@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="../../action-bar/action.css" rel="stylesheet">
+	<link href="../../modal/modal.css" rel="stylesheet">
+	<link href="../../ux-core/css/app.css" rel="stylesheet">
+	<link href="../../ux-core/css/article.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<script src="../../modal/build.js" type="module"></script>
+	<title>Please confirm {action}</title>
+</head>
+<body>
+<div id="modal">
+<!--BEGIN-->
+
+	<!--#modal-->
+	<form
+		action="app://(path)"
+		data-action="confirm" data-class="{type.%name}" data-id="{?type.id}" data-route="{type.@route}"
+		method="post" target="{?target}"
+	>
+		<input type="hidden" name="confirm" value="{hash}">
+		<header><h2>Please confirm {action}</h2></header>
+		<p>
+			{message}
+		</p>
+		<footer>
+			<ul class="selection actions">
+				<li class="{action}"><input type="submit" value="Confirm"></li>
+				<li class="close"><a href="about:blank" target="#modal">Cancel</a></li>
+			</ul>
+		</footer>
+	</form>
+	<!--#end-->
+
+<!--END-->
+</div>
+</body>
+</html>

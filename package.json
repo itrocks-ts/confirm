@@ -1,0 +1,54 @@
+{
+	"author": {
+		"name": "Baptiste Pillot",
+		"email": "baptiste@pillot.fr"
+	},
+	"dependencies": {
+		"@itrocks/action": "latest",
+		"@itrocks/action-bar": "latest",
+		"@itrocks/action-request": "latest",
+		"@itrocks/modal": "latest",
+		"@itrocks/ux-core": "latest",
+		"uuid": "^11.0"
+	},
+	"description": "Seamlessly adds a user confirmation step before executing an action",
+	"devDependencies": {
+		"typescript": "~5.6"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"exports": "./cjs/confirm.js",
+	"homepage": "https://it.rocks",
+	"files": [
+		"LICENSE",
+		"README.md",
+		"cjs/*",
+		"!*.map"
+	],
+	"keywords": [
+		"action",
+		"backend",
+		"component",
+		"confirm",
+		"confirmation",
+		"interactive",
+		"it.rocks",
+		"prompt",
+		"session",
+		"user",
+		"UI",
+		"UX"
+	],
+	"license": "ISC",
+	"name": "@itrocks/confirm",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/itrocks-ts/confirm.git"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.json && cp src/*.html cjs/"
+	},
+	"types": "./cjs/confirm.d.ts",
+	"version": "0.0.2"
+}
