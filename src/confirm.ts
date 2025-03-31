@@ -21,11 +21,9 @@ export class Confirm<T extends object = object> extends Action<T>
 
 	generateConfirmHash(request: Request<T>)
 	{
-		const hash    = v4()
-		const session = request.request.session
-		if (!session.confirm) {
-			session.confirm = {}
-		}
+		const hash            = v4()
+		const session         = request.request.session
+		session.confirm     ??= {}
 		const requestClone    = Object.assign(Object.create(Object.getPrototypeOf(request)), request)
 		requestClone.request  = Object.assign(Object.create(Object.getPrototypeOf(request.request)), request.request)
 		delete requestClone.request.raw
