@@ -2,10 +2,10 @@ import { Action }  from '@itrocks/action'
 import { Request } from '@itrocks/action-request'
 import { v4 }      from 'uuid'
 
-export class Confirm extends Action
+export class Confirm<T extends object = object> extends Action<T>
 {
 
-	confirmed(request: Request): Request | undefined
+	confirmed(request: Request<T>): Request<T> | undefined
 	{
 		const data             = request.request.data
 		const session          = request.request.session
@@ -19,7 +19,7 @@ export class Confirm extends Action
 		return confirmedRequest
 	}
 
-	generateConfirmHash(request: Request)
+	generateConfirmHash(request: Request<T>)
 	{
 		const hash    = v4()
 		const session = request.request.session
@@ -34,7 +34,7 @@ export class Confirm extends Action
 		return hash
 	}
 
-	html(request: Request, message: string)
+	html(request: Request<T>, message: string)
 	{
 		return this.htmlTemplateResponse(
 			{
