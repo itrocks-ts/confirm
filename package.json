@@ -9,7 +9,7 @@
 		"@itrocks/action-request": "latest",
 		"@itrocks/modal": "latest",
 		"@itrocks/ux-core": "latest",
-		"uuid": "^13.0"
+		"uuid": "^14.0"
 	},
 	"description": "Seamlessly adds a user confirmation step before executing an action",
 	"devDependencies": {
@@ -50,5 +50,5 @@
 		"build": "tsc && cp src/*.html cjs/"
 	},
 	"types": "./cjs/confirm.d.ts",
-	"version": "0.0.8"
+	"version": "0.0.9"
 }
