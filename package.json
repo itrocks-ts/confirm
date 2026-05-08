@@ -13,17 +13,17 @@
 	},
 	"description": "Seamlessly adds a user confirmation step before executing an action",
 	"devDependencies": {
-		"typescript": "~5.9"
+		"typescript": "^6.0"
 	},
 	"engines": {
-		"node": ">=18"
+		"node": ">=24"
 	},
 	"exports": "./cjs/confirm.js",
 	"homepage": "https://it.rocks",
 	"files": [
 		"LICENSE",
 		"README.md",
-		"cjs/*",
+		"cjs",
 		"!*.map"
 	],
 	"keywords": [
@@ -49,6 +49,5 @@
 	"scripts": {
 		"build": "tsc && cp src/*.html cjs/"
 	},
-	"types": "./cjs/confirm.d.ts",
-	"version": "0.0.9"
+	"version": "0.1.0"
 }
