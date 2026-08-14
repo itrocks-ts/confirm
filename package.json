@@ -14,7 +14,7 @@
 	"description": "Seamlessly adds a user confirmation step before executing an action",
 	"devDependencies": {
 		"@types/node": "^24.0",
-		"typescript": "^6.0"
+		"typescript": "^7.0"
 	},
 	"engines": {
 		"node": ">=24"
@@ -50,5 +50,5 @@
 	"scripts": {
 		"build": "tsc && cp src/*.html cjs/"
 	},
-	"version": "0.1.1"
+	"version": "0.1.2"
 }
